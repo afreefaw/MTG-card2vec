@@ -18,27 +18,4 @@ class DeckCorpus():
             yield card_ints_to_list(deck, shuffle = self.shuffle)
     
     def __len__(self):
-        return len(self.data)    
-    
-#     def __init__(self, data=None, shuffle=True):
-
-#         self.data = data.copy()
-#         self.position = 0
-#         self.shuffle = shuffle
-
-#     def __next__(self):
-#         if self.position < len(self):
-#             return_val = card_ints_to_list(
-#                 self.data.iloc[self.position,:],
-#                 shuffle = self.shuffle
-#             )
-#             self.position += 1
-#         else:
-#             raise StopIteration
-#         return return_val
-    
-#     def __iter__(self):
-#         return self
-    
-#     def __len__(self):
-#         return len(self.data)
+        return len(self.data)
