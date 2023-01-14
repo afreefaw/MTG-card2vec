@@ -2,8 +2,8 @@ import pandas as pd
 from random import shuffle as shuf
 
 def card_ints_to_list(series, shuffle=False):
-    ''' Take a pandas Series in which the index is card names and values are integer card counts
-    and return a list in which each element the name of a card (as a string).
+    ''' Take a pandas Series in which the index is card names and values are integer card
+    counts and return a list in which each element is the name of a card (as a string).
     
     e.g., see the example input series below and corresponding example output
     
