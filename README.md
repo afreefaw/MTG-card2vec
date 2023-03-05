@@ -9,7 +9,7 @@ Embeddings allow for some cool card math:
 
 ![math_visual_transparent](https://user-images.githubusercontent.com/55111775/222978940-322bc991-fcb7-4bf4-aaa1-5a94f4cf4fe1.png)
 
-
+For more details on what this image is showing, see [examples](#examples).
 
 ## About Embeddings
 Card embeddings are rich representations of cards, learned entirely from decklists. card2vec does not receive any information about the cards (such as colour, converted mana cost, power/toughness, abilities) other than their name, and what decks they are in.
