@@ -1,7 +1,38 @@
 # card2vec
-
-## Vector embeddings of Magic the Gathering cards using 17Lands data and gensim
+Vector embeddings of Magic the Gathering cards using 17Lands data and gensim.
 
 **word**2vec creates vector embeddings of words such that semantically similar words are located close together in vector space.
 
 **card**2vec uses word2vec to create embeddings of Magic the Gathering cards such that similar cards are close together.
+
+## About Embeddings
+Card embeddings are rich representations of cards, learned entirely from decklists. card2vec does not receive any information about the cards (such as colour, converted mana cost, power/toughness, abilities) other than their name, and what decks they are in.
+
+An embedding is a vector in which each value can be thought of as a numerical representation of a feature of the card. For example, if the embedding for a card was:
+
+```python
+Array([0.06, 0.01, 22.43])
+```
+The card would be strongly expressing the feature in the 3rd position (which might indicate e.g., whether it is a sorcery), but the other two features are low (so for example, that might indicate it is NOT a red card, and NOT a creature).
+
+In practice, embeddings are much longer vectors (currently length 100), and the features may be much harder to interpret than in this simple example.
+
+## Examples
+
+Using dimensionality reduction techniques such as [T-SNE](https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1), the vectors can be reduced to just 2 dimensions for plotting while preserving some of the information about distances between the embeddings in vector space.
+
+Much of the richness of the embeddings is lost through this process, however it allows us to visualize high-level card similarities (mostly colour).
+
+### Examples for the set *Streets of New Capenna:*
+
+**Artifacts are at the intersection of the different colour clusters**
+<p align="left">
+  <img width="500" src="https://user-images.githubusercontent.com/55111775/222976920-373aa547-5bcb-4ede-8d0d-c2bad5ac35e7.gif">
+</p>
+
+
+**Multi-colour cards are tightly clustered**
+
+<p align="left">
+  <img width="500" src="https://user-images.githubusercontent.com/55111775/222976936-c0f1c33a-76c7-4f07-a29e-fc8a60e8e4a9.gif">
+</p>
