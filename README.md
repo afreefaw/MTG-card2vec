@@ -1,5 +1,5 @@
 # card2vec
-Vector embeddings of Magic the Gathering cards using 17Lands data and gensim.
+Vector embeddings of Magic the Gathering cards using [17Lands data](https://www.17lands.com/public_datasets) and [gensim](https://github.com/RaRe-Technologies/gensim).
 
 **word**2vec creates vector embeddings of words such that semantically similar words are located close together in vector space.
 
@@ -21,7 +21,7 @@ Array([0.06, 0.01, 22.43])
 ```
 The card would be strongly expressing the feature in the 3rd position (which might indicate e.g., whether it is a sorcery), but the other two features are low (so for example, that might indicate it is NOT a red card, and NOT a creature).
 
-In practice, embeddings are much longer vectors (currently length 100), and the features may be much harder to interpret than in this simple example.
+In practice, embeddings are much longer vectors (currently length 100), and the features are much harder to interpret than in this simplified example.
 
 ## Examples
 
