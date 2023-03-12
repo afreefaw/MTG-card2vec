@@ -2,21 +2,27 @@
 
 from gensim.models.callbacks import CallbackAny2Vec
 from gensim.models import Word2Vec
+import logging
 
 # init callback class
 class LossCallback(CallbackAny2Vec):
     """
-    Callback to print loss after each epoch.
+    Callback to log loss to file after each epoch.
     
     """
-    def __init__(self):
+    def __init__(self, log_file):
         self.epoch = 0
+        self.log_file = log_file
+        logging.basicConfig(filename=log_file, level=logging.INFO)
 
     def on_epoch_end(self, model):
         loss = model.get_latest_training_loss()
         if self.epoch == 0:
-            print('Loss after epoch {}: {}'.format(self.epoch, loss))
+            log_str = f'Loss after epoch {self.epoch}: {loss}'
         else:
-            print('Loss after epoch {}: {}'.format(self.epoch, loss- self.loss_previous_step))
+            print_loss = loss-self.loss_previous_step
+            log_str = f'Loss after epoch {self.epoch}: {print_loss}'
+        print(print_loss)
+        logging.info(log_str)
         self.epoch += 1
         self.loss_previous_step = loss
