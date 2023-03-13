@@ -22,7 +22,6 @@ class LossCallback(CallbackAny2Vec):
         else:
             print_loss = loss-self.loss_previous_step
             log_str = f'Loss after epoch {self.epoch}: {print_loss}'
-        print(print_loss)
         logging.info(log_str)
         self.epoch += 1
         self.loss_previous_step = loss
