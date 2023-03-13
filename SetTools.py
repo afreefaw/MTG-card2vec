@@ -47,7 +47,7 @@ def _extract_urls(response_json, name_to_card_details) -> dict:
         else:
             name_to_use = value["name"]
             name_to_card_details[name_to_use] = {}
-        name_to_card_details[name_to_use]["url"] = value["image_uris"]["normal"]
+        name_to_card_details[name_to_use]["url"] = value["image_uris"]["large"]
 
     return name_to_card_details
 
@@ -64,7 +64,7 @@ def _extract_rarity(response_json, name_to_card_details) -> dict:
         
     return name_to_card_details
         
-def _scryfall_card_details(set_abbreviation) -> dict:
+def scryfall_card_details(set_abbreviation) -> dict:
     '''Calls the Scryfall API to get information on all cards in a specified set and
     returns a dictionary mapping card names to their corresponding image URLs and rarity.'''
     
