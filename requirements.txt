@@ -1,7 +1,10 @@
-gensim==4.1.2
+gensim==4.3.1
 ipython
 ipywidgets==7.6.5
-numpy==1.21.5
+numpy==1.24.2
 pandas==1.4.2
 polars==0.16.12
 pyarrow==11.0.0
+sklearn==1.2.2
+requests
+altair==4.2.2
