@@ -1,4 +1,6 @@
 # card2vec
+Check out the proof of concept site [here]([url](https://card2vec.herokuapp.com/)): 
+
 Vector embeddings of Magic the Gathering cards using [17Lands data](https://www.17lands.com/public_datasets) and [gensim](https://github.com/RaRe-Technologies/gensim).
 
 **word**2vec creates vector embeddings of words such that semantically similar words are located close together in vector space.
