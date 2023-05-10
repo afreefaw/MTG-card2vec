@@ -1,5 +1,5 @@
 # card2vec
-Check out the proof of concept site [here]([url](https://card2vec.herokuapp.com/)): 
+Check out a ***rough tech-demo*** of this concept [here]([url](https://card2vec.herokuapp.com/)).
 
 Vector embeddings of Magic the Gathering cards using [17Lands data](https://www.17lands.com/public_datasets) and [gensim](https://github.com/RaRe-Technologies/gensim).
 
