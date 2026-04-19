@@ -3,7 +3,7 @@
 
 Vector embeddings of Magic the Gathering cards using [17Lands data](https://www.17lands.com/public_datasets) and [gensim](https://github.com/RaRe-Technologies/gensim), based on millions of decks scraped from 8 websites.
 
-**word**2vec creates vector embeddings of words such that semantically similar words are located close together in vector space.
+**word**2vec created vector embeddings of words such that semantically similar words are located close together in vector space.
 
 **card**2vec uses word2vec to create embeddings of Magic the Gathering cards such that similar cards are close together.
 
